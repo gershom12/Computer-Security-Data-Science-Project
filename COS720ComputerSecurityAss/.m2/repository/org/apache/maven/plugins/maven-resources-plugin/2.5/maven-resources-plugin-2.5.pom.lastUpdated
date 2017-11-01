@@ -1,0 +1,6 @@
+#NOTE: This is an internal implementation file, its format can be changed without prior notice.
+#Wed Feb 15 14:02:23 SAST 2017
+default-http\://repo.maven.apache.org/maven2/.lastUpdated=1487160143743
+http\://repo.maven.apache.org/maven2/.error=Could not transfer artifact org.apache.maven.plugins\:maven-resources-plugin\:pom\:2.5 from/to central (http\://repo.maven.apache.org/maven2)\: repo.maven.apache.org\: Temporary failure in name resolution
+f96074ee6a4b55f0364af84d51e2602d426480e5@proxy.somewhere.com\:8080>default-http\://repo.maven.apache.org/maven2/.lastUpdated=1487159515275
+2208b436f759d446197d0bf605b332d87563f23e@proxy.host.net\:80>default-http\://repo.maven.apache.org/maven2/.lastUpdated=1487159829711

@@ -1,0 +1,33 @@
+---
+title: "Clean_csv"
+author: "Gershom"
+date: "16 May 2017"
+output: html_document
+---
+
+---
+
+```{r setup, include=FALSE}
+attach(claims)
+#Read csv file
+data <- read.csv('/home/gershom/Desktop/Honours/COS720/Assignment/COS720ComputerSecurityAss/src/main/java/com/mycompany/cos720computersecurityass/claims.csv')
+
+clean <- function(ttt){
+  
+  gsub('[^a-zA-Z0-9.]','',ttt)
+
+}
+
+data[] <- sapply(data,clean)
+
+
+#removeEmptyRows <- function(ttt){
+  
+ # gsub(' ','',ttt)
+
+#}
+#removeDuplicateRecors <- function(ttt){
+  
+ # gsub(' ','',ttt)
+
+#}

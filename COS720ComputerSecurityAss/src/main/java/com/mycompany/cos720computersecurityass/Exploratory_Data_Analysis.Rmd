@@ -1,0 +1,104 @@
+---
+title: "EDA(Exploraatory Data Analysis"
+author: Gershom Nhlahla Maluleke
+date: 14 April 2017
+output: html_document
+---
+
+---
+
+```{r setup, include=FALSE}
+attach(claims)
+table(GenderOfPolicyHolder)
+
+#Pie charts
+#Gender pie chart
+pie(table(Race))
+
+#Marital status 
+pie(table(MaritalStatusPolicyHolder))
+
+#Kind of loss
+pie(table(deasease))
+
+#Province loss occured 
+pie(table(ProvinceLossOccured))
+
+#Fradulent claim indicator
+pie(table(FraudulentClaimIndicator))
+
+#Fradulent claim reason
+pie(table(FraudulentClaimReason))
+
+#Bar plots
+ 
+#Gender
+counts <-table(deasease)
+barplot(counts, main= "Gender",xlab="Gender",col=c("darkblue","red"),legend = rownames(counts),beside = TRUE)
+
+attach(claims)
+
+#Fradulent claim indicator
+counts <-table(FraudulentClaimIndicator)
+barplot(counts, main= "Fraudulent claim indicator",xlab="Indicator",col=c("black","red"),legend = rownames(counts),beside = TRUE)
+
+#Marital status policy holder
+counts <-table(MaritalStatusPolicyHolder)
+barplot(counts, main= "Marital status policy holder",xlab="Status",col=c("blue","orange","red","white","black","yellow"),legend = rownames(counts),beside = TRUE)
+
+#Summaries
+
+#Amount paid
+summary(claims)
+
+#Total policy revenue
+summary(TotalPolicyRevenue)
+
+#Total sum insured
+summary(TotalSumInsured)
+
+#Histogram
+
+
+#Amount paid
+hist(AmountPaid,col="green")
+
+# Total Policy revenue
+revenue <- gsub(",", "", TotalPolicyRevenue)
+revenue <- as.numeric(revenue) 
+hist(revenue,col="red")
+
+# Total sum insured
+SumInsured <- gsub(",", "", TotalSumInsured)
+SumInsured <- as.numeric(SumInsured) 
+hist(SumInsured,col="red")
+
+#Scatter plot
+
+duration = faithful$eruptions      
+waiting = faithful$waiting         
+plot(duration, waiting,xlab="Gender",ylab="Amount paid") 
+
+
+#Box bplot
+
+#Amount paid
+boxplot(AmountPaid, main= "Amount paid")
+
+#Total policy revenue
+boxplot(as.numeric(TotalPolicyRevenue),main= "Total policy revenue")
+
+#Total sum insured
+boxplot(as.numeric(TotalSumInsured), main= "Total sum insured")
+                   
+
+
+
+
+
+
+
+
+
+```
+
